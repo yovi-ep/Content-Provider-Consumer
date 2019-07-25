@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
                 cursor.getString(cursor.getColumnIndex(DatabaseContract.FavoriteColumns.TITLE)),
                 cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.ORIG_TITLE)),
                 cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.OVERVIEW)),
-                cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.ADULT)).toString().toBoolean(),
+                (cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.ADULT))?:"0").toBoolean(),
                 cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.RELEASE_DATE)),
                 cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.RATE)),
                 cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.BACKDROP)),
