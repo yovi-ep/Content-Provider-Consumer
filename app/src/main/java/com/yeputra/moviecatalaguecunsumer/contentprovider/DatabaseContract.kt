@@ -1,6 +1,5 @@
 package com.yeputra.moviecatalaguecunsumer.contentprovider
 
-import android.database.Cursor
 import android.net.Uri
 import android.provider.BaseColumns
 

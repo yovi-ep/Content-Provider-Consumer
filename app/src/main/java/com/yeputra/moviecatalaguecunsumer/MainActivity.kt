@@ -9,21 +9,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.yeputra.moviecatalaguecunsumer.contentprovider.DatabaseContract
-import com.yeputra.moviecatalaguecunsumer.contentprovider.FavoriteService
 import com.yeputra.moviecatalaguecunsumer.model.MovieFavorite
 import com.yeputra.moviecatalaguecunsumer.utils.Constans
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.Boolean
 
 class MainActivity : AppCompatActivity() {
     private lateinit var adapter: MovieAdapter
-    private lateinit var favoriteService: FavoriteService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        favoriteService = FavoriteService(this)
 
         swiperefresh.setColorSchemeColors(ContextCompat.getColor(this, R.color.colorAccent))
         swiperefresh.setOnRefreshListener {
@@ -71,7 +66,7 @@ class MainActivity : AppCompatActivity() {
                 cursor.getString(cursor.getColumnIndex(DatabaseContract.FavoriteColumns.TITLE)),
                 cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.ORIG_TITLE)),
                 cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.OVERVIEW)),
-                Boolean.parseBoolean(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.ADULT))),
+                cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.ADULT)).toString().toBoolean(),
                 cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.RELEASE_DATE)),
                 cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.RATE)),
                 cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.BACKDROP)),

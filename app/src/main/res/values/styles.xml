@@ -48,10 +48,6 @@
 
     <!--___________ TEXT BOLD ___________-->
 
-    <style name="TextView.MediumBold" parent="TextView.Medium">
-        <item name="android:textStyle">bold</item>
-    </style>
-
     <style name="TextView.ExtraBigBold" parent="TextView.ExtraBig">
         <item name="android:textStyle">bold</item>
     </style>

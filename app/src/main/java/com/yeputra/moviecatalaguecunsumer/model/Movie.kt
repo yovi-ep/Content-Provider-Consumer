@@ -16,7 +16,3 @@ data class MovieFavorite (
         val poster_path: String?,
         val type: String?
 ) : Parcelable
-
-enum class FilmType {
-    MOVIE, TVSHOW
-}
