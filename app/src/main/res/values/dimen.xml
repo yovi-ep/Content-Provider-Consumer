@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_extra_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_big">21dp</dimen>
+    <dimen name="margin_extra_big">32dp</dimen>
+
+    <dimen name="title_toolbar_size">20sp</dimen>
+
+    <dimen name="card_radius_small">2dp</dimen>
+    <dimen name="card_radius_medium">4dp</dimen>
+
+    <dimen name="card_elevation_medium">1.5dp</dimen>
+
+    <dimen name="divider">0.6dp</dimen>
+    <dimen name="divider_width">50dp</dimen>
+
+    <!-- Item Movie-->
+    <dimen name="item_poster_height">250dp</dimen>
+    <!-- Detail Movie-->
+    <dimen name="banner_height">230dp</dimen>
+    <dimen name="poster_width">100dp</dimen>
+    <dimen name="poster_height">130dp</dimen>
+    <dimen name="poster_margin_top_offset">200dp</dimen>
+</resources>
